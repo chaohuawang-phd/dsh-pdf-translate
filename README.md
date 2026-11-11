@@ -49,6 +49,8 @@ PDF 提取和排版在本地执行。原文与译文会进入当前 dsh 会话�
 
 ## 测试
 
+本机已完成 15 项回归测试、真实 dsh 技能加载及当前会话模型驱动的 PDF 翻译。测试环境、模型接口情况和验收范围见 [本地验收记录](TESTING.md)。
+
 ```sh
 .venv/bin/python -m unittest discover -s tests -v
 ```
