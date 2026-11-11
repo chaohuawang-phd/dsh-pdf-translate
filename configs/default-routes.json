@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "entry_script": "scripts/paper_translation_workflow.py",
+  "defaults": {
+    "digital_pdf": "translate",
+    "long_pdf": "translate",
+    "translation_engine": "current_conversation",
+    "model": "inherit_current_dsh_session",
+    "reasoning_effort": "inherit_current_dsh_session",
+    "deliverables": ["译文.pdf"],
+    "generate_bilingual": false
+  },
+  "routes": {
+    "translate": {
+      "translator": "current_conversation",
+      "local_pdf_helper": "scripts/session_pdf.py",
+      "requires_provider_credentials": false,
+      "automatic_external_fallback": false,
+      "intermediate_files": "private_work_directory",
+      "source_policy": "preserve_original_file_and_page_order"
+    }
+  }
+}
